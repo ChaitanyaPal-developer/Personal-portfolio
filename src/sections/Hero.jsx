@@ -1,4 +1,4 @@
-import { Button } from "../components/Button";
+
 import {
   ArrowRight,
   ChevronDown,
@@ -7,9 +7,10 @@ import {
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
 const skills = [
+  "HTML",
+  "CSS",
   "React",
   "Python",
-  "Node.js",
   "Node.js",
   "MySQL",
   "MongoDB",
@@ -25,6 +26,7 @@ const skills = [
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
+
       {/* Background */}
       <div className="absolute inset-0">
         <img
@@ -45,9 +47,7 @@ export const Hero = () => {
               backgroundColor: "#20B2A6",
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              animation: `slow-drift ${
-                15 + Math.random() * 20
-              }s ease-in-out infinite`,
+              animation: `slow-drift ${15 + Math.random() * 20}s ease-in-out infinite`,
               animationDelay: `${Math.random() * 5}s`,
             }}
           />
@@ -56,9 +56,12 @@ export const Hero = () => {
 
       {/* Main Content */}
       <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
+
         <div className="grid lg:grid-cols-2 gap-12 items-center">
+
           {/* Left Column */}
           <div className="space-y-8">
+
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
@@ -69,7 +72,7 @@ export const Hero = () => {
             {/* Headline */}
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                Building {" "}
+                Building{" "}
                 <span className="text-primary glow-text">digital</span>
                 <br />
                 experiences that
@@ -79,31 +82,46 @@ export const Hero = () => {
                 </span>
               </h1>
 
-              <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi, I'm Chaitanya Pal — an aspiring software engineer specializing in
-                React, Node.js and many more . I build scalable, performant
-                web applications that users love.
-              </p>
+             
+
+<p className="text-lg text-muted-foreground max-w-lg leading-relaxed animate-fade-in animation-delay-200">
+  Hi👋, I'm{" "}
+  <span className="inline-block text-2xl md:text-3xl font-bold tracking-tight underline underline-offset-4 decoration-amber-300 decoration-2 bg-gradient-to-r from-amber-300 via-yellow-100 to-amber-400 bg-clip-text text-transparent">
+    Chaitanya Pal
+  </span>
+  {" "}— an aspiring Software Engineer passionate about crafting modern, impactful digital experiences. I specialize in React and Node.js, building responsive, scalable, and high-performance web applications that turn ideas into meaningful solutions.
+</p>
+
+
             </div>
 
             {/* Buttons */}
-            <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <Button size="lg">
-                Contact Me <ArrowRight className="w-5 h-5" />
-              </Button>
+            <div className="flex flex-wrap items-center gap-4 animate-fade-in animation-delay-300">
 
-              <a href="/cv.pdf" download="My-Resume.pdf">
-  <AnimatedBorderButton>
-    <Download className="w-5 h-5" />
-    Download CV
-  </AnimatedBorderButton>
-</a>
+              {/* Explore My Work */}
+              <a
+                href="#projects"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-darker bg-purple-600 px-8 py-4 text-primary-foreground font-semibold hover:scale-105 transition-transform"
+              >
+                Explore My Work
+                <ArrowRight className="w-5 h-5" />
+              </a>
+
+              {/* Download CV */}
+              <a href="/cv.pdf" download="CP-Resume.pdf">
+                <AnimatedBorderButton>
+                  <Download className="w-5 h-5" />
+                  Download CV
+                </AnimatedBorderButton>
+              </a>
+
             </div>
           </div>
 
           {/* Right Column - Profile Image */}
           <div className="relative animate-fade-in animation-delay-300">
             <div className="relative max-w-md mx-auto">
+
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse" />
 
               <div className="relative glass rounded-3xl p-2 glow-border">
@@ -126,9 +144,11 @@ export const Hero = () => {
                 {/* Experience Badge */}
                 <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
                 </div>
+
               </div>
             </div>
           </div>
+
         </div>
 
         {/* Skills Section */}
@@ -152,6 +172,7 @@ export const Hero = () => {
             </div>
           </div>
         </div>
+
       </div>
 
       {/* Scroll Indicator */}
@@ -160,10 +181,13 @@ export const Hero = () => {
           href="#about"
           className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
         >
-          <span className="text-xs uppercase tracking-wider">Scroll</span>
+          <span className="text-xs uppercase tracking-wider">
+            Scroll
+          </span>
           <ChevronDown className="w-6 h-6 animate-bounce" />
         </a>
       </div>
+
     </section>
   );
 };
