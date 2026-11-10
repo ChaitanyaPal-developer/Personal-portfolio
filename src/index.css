@@ -122,7 +122,7 @@
   }
 
   .animate-float {
-    animation: float 4s ease-in-out infinite;
+    animation: float 3s ease-in-out infinite;
   }
 
   .animate-marquee {
@@ -172,7 +172,7 @@
 
   .animated-border:hover {
     background-color: color-mix(in srgb, #26c4b8 15%, transparent);
-    backdrop-filter: blur(16px);
+    backdrop-filter: blur(17px);
     box-shadow: 0 0 20px color-mix(in srgb, #26c4b8 20%, transparent);
   }
 
